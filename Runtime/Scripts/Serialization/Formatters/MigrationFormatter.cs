@@ -40,7 +40,6 @@ namespace Nodemon
 
         protected override void DeserializeImplementation(ref T p_value, IDataReader p_reader)
         {
-            Debug.Log("MigratableFormatter.Deserialize: " + typeof(K));
             bool skipCurrentDeserialization = false;
             if (p_reader.PeekEntry(out string name) == EntryType.Integer)
             {

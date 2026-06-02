@@ -3,7 +3,6 @@
  */
 
 using System;
-using System.Linq;
 using Nodemon;
 using OdinSerializer;
 using UnityEngine;
@@ -16,6 +15,7 @@ namespace Nodemon
     {
         public bool TryGetFormatter(Type p_type, FormatterLocationStep step, ISerializationPolicy p_policy, bool p_allowWeakFallbackFormatters, out IFormatter p_formatter)
         {
+            //Debug.Log("TryGetFormatter "+p_type);
             if (!typeof(IMigratable).IsAssignableFrom(p_type))
             {
                 p_formatter = null;
