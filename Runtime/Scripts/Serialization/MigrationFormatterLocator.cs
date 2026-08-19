@@ -25,7 +25,6 @@ namespace Nodemon
             p_formatter =
                 (IFormatter)Activator.CreateInstance(
                     typeof(MigrationFormatter<,>).MakeGenericType(typeof(IMigratable), p_type));
-            Debug.Log(p_formatter);
             return true;
         }
     }
